@@ -2,6 +2,8 @@
 
 **Required Graylog version:** 2.0 and later
 
+Inspired from [squioc/graylog-http-plugin](https://github.com/squioc/graylog-http-plugin)
+
 This Plugin has a very specific purpose:  Write the messages to an Azure EventHubs, indicated in the Plugin configuration parameters.
 
 Getting started
@@ -27,9 +29,13 @@ Restart `graylog-server` and you are done.
 Usage
 -----
 
-Once you have installed the plugin, you can configure an Output of type  com.plugin.HttpOutput, with this simple parameter:
+Once you have installed the plugin, you can configure an Output of type  com.plugin.EventHubsOutput, with this simple parameter:
 
 output_api: API where the stream message is forwarded to.
+
+sas_name: SAS name
+
+sas_value: SAS key
 
 Plugin Release
 --------------
