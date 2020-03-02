@@ -11,8 +11,8 @@ import java.util.Set;
 /**
  * Implement the PluginMetaData interface here.
  */
-public class HttpOutputMetaData implements PluginMetaData {
-    private static final String PLUGIN_PROPERTIES = "com.plugin.graylog-plugin-http-output/graylog-plugin.properties";
+public class EventHubsOutputMetaData implements PluginMetaData {
+    private static final String PLUGIN_PROPERTIES = "com.plugin.graylog-plugin-eventhubs-output/graylog-plugin.properties";
 
     @Override
     public String getUniqueId() {
@@ -26,12 +26,12 @@ public class HttpOutputMetaData implements PluginMetaData {
 
     @Override
     public String getAuthor() {
-        return "Sagar Revanna <sagarinpursue@gmail.com>";
+        return "Dino Wang <dino.cool@gmail.com>";
     }
 
     @Override
     public URI getURL() {
-        return URI.create("https://github.com/sagarinpursue/graylog-http-plugin");
+        return URI.create("https://github.com/dinowang/graylog-eventhubs-plugin");
     }
 
     @Override
@@ -41,12 +41,13 @@ public class HttpOutputMetaData implements PluginMetaData {
 
     @Override
     public String getDescription() {
-        return "Graylog plugin to post Stream data to HTTP.";
+        return "Graylog plugin to post Stream data to Azure EventHubs.";
     }
 
     @Override
     public Version getRequiredVersion() {
-        return Version.fromPluginProperties(getClass(), PLUGIN_PROPERTIES, "graylog.version", Version.from(0, 0, 0, "unknown"));
+        return Version.fromPluginProperties(getClass(), PLUGIN_PROPERTIES, "graylog.version",
+                Version.from(0, 0, 0, "unknown"));
     }
 
     @Override

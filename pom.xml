@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-   <!-- <parent>
+    <!-- <parent>
     <artifactId>graylog-project</artifactId>
     <groupId>org.graylog</groupId>
     <version>2.2.0-SNAPSHOT</version>
@@ -13,8 +14,8 @@
     </prerequisites>
 
     <groupId>com.plugin</groupId>
-    <artifactId>graylog-plugin-http-output</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <artifactId>graylog-plugin-eventhubs-output</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
@@ -29,9 +30,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:sagarinpursue/graylog-http-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:sagarinpursue/graylog-http-plugin.git</developerConnection>
-        <url>https://github.com/sagarinpursue/graylog-http-plugin</url>
+        <connection>scm:git:git@github.com:dinowang/graylog-eventhubs-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:dinowang/graylog-eventhubs-plugin.git</developerConnection>
+        <url>https://github.com/sagarinpursue/graylog-eventhubs-plugin</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -60,7 +61,7 @@
         </repository>
     </distributionManagement>-->
 
-<!--    <repositories>
+    <!--    <repositories>
         &lt;!&ndash; to make our snapshot releases work with Travis et al &ndash;&gt;
         <repository>
             <id>sonatype-nexus-snapshots</id>
@@ -122,10 +123,12 @@
 
     <build>
         <resources>
-            <resource><directory>build</directory></resource>
             <resource>
-              <directory>src/main/resources</directory>
-              <filtering>true</filtering>
+                <directory>build</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
             </resource>
         </resources>
         <plugins>

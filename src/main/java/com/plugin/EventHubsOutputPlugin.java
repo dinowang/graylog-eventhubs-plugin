@@ -10,14 +10,14 @@ import java.util.Collections;
 /**
  * Implement the Plugin interface here.
  */
-public class HttpOutputPlugin implements Plugin {
+public class EventHubsOutputPlugin implements Plugin {
     @Override
     public PluginMetaData metadata() {
-        return new HttpOutputMetaData();
+        return new EventHubsOutputMetaData();
     }
 
     @Override
-    public Collection<PluginModule> modules () {
-        return Collections.<PluginModule>singletonList(new HttpOutputModule());
+    public Collection<PluginModule> modules() {
+        return Collections.<PluginModule>singletonList(new EventHubsOutputModule());
     }
 }

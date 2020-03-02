@@ -13,11 +13,12 @@ import java.util.Set;
 /**
  * Extend the PluginModule abstract class here to add you plugin to the system.
  */
-public class HttpOutputModule extends PluginModule {
+public class EventHubsOutputModule extends PluginModule {
     /**
      * Returns all configuration beans required by this plugin.
      *
-     * Implementing this method is optional. The default method returns an empty {@link Set}.
+     * Implementing this method is optional. The default method returns an empty
+     * {@link Set}.
      */
     @Override
     public Set<? extends PluginConfigBean> getConfigBeans() {
@@ -31,12 +32,10 @@ public class HttpOutputModule extends PluginModule {
          *
          * Examples:
          *
-         * addMessageInput(Class<? extends MessageInput>);
-         * addMessageFilter(Class<? extends MessageFilter>);
-         * addMessageOutput(Class<? extends MessageOutput>);
-         * addPeriodical(Class<? extends Periodical>);
-         * addAlarmCallback(Class<? extends AlarmCallback>);
-         * addInitializer(Class<? extends Service>);
+         * addMessageInput(Class<? extends MessageInput>); addMessageFilter(Class<?
+         * extends MessageFilter>); addMessageOutput(Class<? extends MessageOutput>);
+         * addPeriodical(Class<? extends Periodical>); addAlarmCallback(Class<? extends
+         * AlarmCallback>); addInitializer(Class<? extends Service>);
          * addRestResource(Class<? extends PluginRestResource>);
          *
          *
@@ -46,6 +45,6 @@ public class HttpOutputModule extends PluginModule {
          */
 
         MapBinder<String, Factory<? extends MessageOutput>> outputMapBinder = outputsMapBinder();
-        installOutput(outputMapBinder, HttpOutput.class, HttpOutput.Factory.class);
+        installOutput(outputMapBinder, EventHubsOutput.class, EventHubsOutput.Factory.class);
     }
 }
