@@ -1,8 +1,8 @@
-# HttpOutput Plugin for Graylog
+# EventHubsOutput Plugin for Graylog
 
 **Required Graylog version:** 2.0 and later
 
-This Plugin has a very specific purpose:  Write the messages to an Http, indicated in the Plugin configuration parameters.
+This Plugin has a very specific purpose:  Write the messages to an Azure EventHubs, indicated in the Plugin configuration parameters.
 
 Getting started
 ---------------
@@ -11,7 +11,7 @@ This project is using Maven 3 and requires Java 8 or higher.
 
 Installation
 ------------
-[Download the plugin](https://github.com/sagarinpursue/graylog-http-plugin)
+[Download the plugin](https://github.com/dinowang/graylog-eventhubs-plugin)
 
 * Clone this repository.
 * Run `mvn package` to build a JAR file.
