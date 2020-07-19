@@ -4,6 +4,8 @@
 
 Inspired from [squioc/graylog-http-plugin](https://github.com/squioc/graylog-http-plugin)
 
+Graylog Marketplace [graylog-plugin-eventhubs-output](https://marketplace.graylog.org/addons/410ba186-909e-4991-b347-1dd4df082dcd)
+
 This Plugin has a very specific purpose:  Write the messages to an Azure EventHubs, indicated in the Plugin configuration parameters.
 
 Getting started
